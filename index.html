@@ -10,7 +10,36 @@
 <body>
 
   <script>
-
+      let options = ["rock", "paper", "scissors", "lizard", "spock"];
+        //Function below randomly choses value from options array above
+      function computerPlay(){
+          return (options[Math.floor(Math.random() * options.length)])
+      }
+      let playerSelection = 'rock';
+      let computerSelection = computerPlay();
+      //Function below calculates result of RPSLS
+      //T0DO figure out how to convert selections to numbers.
+      function playRound(playerSelection, computerSelection){
+        let a = playerSelection;
+        let b = computerSelection;
+        let rock = 0;
+        let paper = 1;
+        let scissors = 2;
+        let lizard = 3;
+        let spock = 4;
+        let result = ((a-b) % 5);
+        console.log(a);
+        if (result == 0) {
+            return ("It's a draw!");
+        }
+        else if(result == 1 || result == 2){
+            return ("You Win! " + a + " beats " + b);
+        }
+        else {
+            return ("You Lose! " + b + " beats " + a);
+        }
+        }
+      console.log(playRound(playerSelection, computerSelection));
   </script>
 </body>
 </html>
