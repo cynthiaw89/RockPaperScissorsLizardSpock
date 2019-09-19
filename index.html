@@ -16,29 +16,62 @@
           return (options[Math.floor(Math.random() * options.length)])
       }
       let playerSelection = 'rock';
+      //Function below uppercases first letter of a string, will be used for result output.
+      function upperCaseFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+      }
       let computerSelection = computerPlay();
       //Function below calculates result of RPSLS
-      //T0DO figure out how to convert selections to numbers.
       function playRound(playerSelection, computerSelection){
-        let a = playerSelection;
+        let a = playerSelection.toLowerCase();
         let b = computerSelection;
-        let rock = 0;
-        let paper = 1;
-        let scissors = 2;
-        let lizard = 3;
-        let spock = 4;
-        let result = ((a-b) % 5);
-        console.log(a);
+        switch (playerSelection){
+          case "rock":
+            a = 0;
+            break;
+          case "paper":
+            a = 1;
+            break;
+          case "scissors":
+            a = 2;
+            break;
+          case "lizard":
+            a = 3;
+            break;
+          case "spock":
+            a = 4;
+            break;
+        }
+        switch (computerSelection){
+          case "rock":
+            b = 0;
+            break;
+          case "paper":
+            b = 1;
+            break;
+          case "scissors":
+            b = 2;
+            break;
+          case "lizard":
+            b = 3;
+            break;
+          case "spock":
+            b = 4;
+            break;
+        }
+        let result = (((a-b)+5) % 5);
         if (result == 0) {
             return ("It's a draw!");
         }
         else if(result == 1 || result == 2){
-            return ("You Win! " + a + " beats " + b);
+            return ("You Win! " + upperCaseFirstLetter(playerSelection) + 
+            " beats " + computerSelection + ".");
         }
         else {
-            return ("You Lose! " + b + " beats " + a);
+            return ("You Lose! " + upperCaseFirstLetter(computerSelection) + 
+            " beats " + playerSelection + ".");
         }
-        }
+      }
       console.log(playRound(playerSelection, computerSelection));
   </script>
 </body>
