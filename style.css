@@ -1,0 +1,45 @@
+html{
+    font-size: 20px;
+    background: url("/home/cynthia/odin_on_rails/projects/rps/media/paper_background.jpg") bottom center;
+    background-color: skyblue;
+    background-size: cover;
+    font-family: sans-serif;
+    display: block;
+    min-height: 100vh;
+}
+#main{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+}
+#explain_image{
+
+}
+img{
+    border: .4rem solid black;
+}
+#buttons{
+    display: inline-flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1.5rem;
+    min-width: 95vw;
+}
+.button{
+    font-size: 2rem;
+}
+#results{
+    min-width: 350px;
+}
+#score_box{
+    border: .2rem solid black;
+    min-width: 250px;
+    padding: 5px;
+}
+footer{
+    font-size: 10px;
+}
