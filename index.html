@@ -6,9 +6,12 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <h1>
+    ROCK - PAPER - SCISSORS - LIZARD - SPOCK
+  </h1>
 <p>I am currently in the process of re-factoring the javascript to work with this new UI.
   <br>
-  Current state: Accepts button input.  Results can be seen in console.  Score tracking is non-functional.
+  Current state: Accepts button input.  Results display for each input.  Score tracking is non-functional.
 </p>
 <div id="main">
   <div id="explain_image">
@@ -22,12 +25,14 @@
       <button class="button" id="input_spock">Spock</button>
   </div>
   <div id="results">
-    results placeholder
+    <p id="pResults"></p>
   </div>
   <div id="score_box">
     Your Score: <span id="playerScore"></span>
     <br>
-    BBEGs Score:
+    BBEGs Score: <span id="BBEGScore"></span>
+    <br>
+    <span id="final"></span>
   </div>
 </div>
 <footer>
